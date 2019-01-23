@@ -8,10 +8,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
-            <c:KibaDateTime Text="00" ></c:KibaDateTime>
-            <c:KibaDateTime Text="00" ></c:KibaDateTime>
-            <c:KibaDateTime Text="00"></c:KibaDateTime>
+        <StackPanel VerticalAlignment="Top" Margin="10" Orientation="Horizontal">
+            <c:KibaDateTime Name="dtHour"></c:KibaDateTime> 
+            <Button Content="查看时间" Click="Button_Click" Width="75"/>
         </StackPanel>
     </DockPanel>
 </Window>

@@ -46,7 +46,55 @@ namespace KibaCustomControl
     ///
     /// </summary>
     public class KibaDateTime : TextBox
-    { 
+    {
+        private static Regex regex = new Regex("[0-9]+");
+        #region 小时
+        public static readonly DependencyProperty HourProperty = DependencyProperty.Register(
+             "Hour", typeof(int), typeof(KibaDateTime), new FrameworkPropertyMetadata(00));
+       
+        public int Hour
+        {
+            get
+            {
+                return (int)GetValue(HourProperty);
+            }
+            set
+            {
+                SetValue(HourProperty, value);
+            }
+        } 
+        #endregion
+        #region 分钟
+        public static readonly DependencyProperty MinuteProperty = DependencyProperty.Register(
+             "Minute", typeof(int), typeof(KibaDateTime), new FrameworkPropertyMetadata(00));
+        
+        public int Minute
+        {
+            get
+            {
+                return (int)GetValue(MinuteProperty);
+            }
+            set
+            {
+                SetValue(MinuteProperty, value);
+            }
+        }
+        #endregion
+        #region 秒
+        public static readonly DependencyProperty SecondProperty = DependencyProperty.Register(
+             "Second", typeof(int), typeof(KibaDateTime), new FrameworkPropertyMetadata(00)); 
+        public int Second
+        {
+            get
+            {
+                return (int)GetValue(SecondProperty);
+            }
+            set
+            {
+                SetValue(SecondProperty, value);
+            }
+        }
+        #endregion
         static KibaDateTime()
         {
             //当此依赖项属性位于指定类型的实例上时为其指定替换元数据，以在该依赖项属性继承自基类型时重写该属性已存在的元数据。

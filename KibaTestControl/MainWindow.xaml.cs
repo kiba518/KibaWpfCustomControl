@@ -24,5 +24,10 @@ namespace KibaTestControl
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("小时："+dtHour.Hour+":"+dtHour.Minute + ":" + dtHour.Second);
+        }
     }
 }

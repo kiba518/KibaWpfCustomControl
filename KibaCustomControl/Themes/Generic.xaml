@@ -9,7 +9,11 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-                        <TextBox Text="{TemplateBinding Text}" Width="24" Height="24" Padding="2,3,0,0" FontSize="12" ></TextBox>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Text="{Binding Hour,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent},UpdateSourceTrigger=PropertyChanged}" Width="24" Height="24" Padding="2,3,0,0" FontSize="12" ></TextBox>
+                            <TextBox Text="{Binding Minute,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent},UpdateSourceTrigger=PropertyChanged}" Width="24" Height="24" Padding="2,3,0,0" FontSize="12" ></TextBox>
+                            <TextBox Text="{Binding Second,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent},UpdateSourceTrigger=PropertyChanged}" Width="24" Height="24" Padding="2,3,0,0" FontSize="12" ></TextBox> 
+                        </StackPanel>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
